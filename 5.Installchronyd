@@ -8,8 +8,6 @@
         name: chrony
         state: latest
 
-    - name: Chronyd configure
-    
     - name: Chroynd start
       service:
         name: chrony
