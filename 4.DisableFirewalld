@@ -1,8 +1,8 @@
 ---
-- name: Disable firewalld
-  hosts: "{{ RUNSVR }}"
+- hosts: "{{ RUNSVR }}"
   tasks:
-    service:
-      name: firewalld
-      state: stoped
-      enable: false
+    - name: Disable firewalld
+      service:
+        name: firewalld
+        state: stoped
+        enable: false
