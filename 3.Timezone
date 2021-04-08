@@ -5,7 +5,7 @@
   tasks:
     - name: Check timezone
       register: timezone_result
-      shell: timedatectl | grep Time | awk '{print $3}'
+      shell: timedatectl | grep "Time zone" | awk '{print $3}'
 
     - name: Set local timezone to Asia/Seoul
       timezone:

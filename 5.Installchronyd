@@ -5,7 +5,12 @@
   tasks:
     - name: Install Chronyd
       yum:
-        name: chronyd
+        name: chrony
         state: latest
 
     - name: Chronyd configure
+    - name: Chroynd start
+      service:
+        name: chrony
+        state: restarted
+        enalbed: true
