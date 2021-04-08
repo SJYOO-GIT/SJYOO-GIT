@@ -7,7 +7,7 @@
       register: sestatus_result
       shell: sestatus | grep SELinux | grep -v grep | awk '{print $3}'
 
-    - name: Change SElinux mode
+    - name: Change SElinux mode & Reboot
       shell: sed -i 's/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
       when:
         sestatus_result.stdout == "disabled"
