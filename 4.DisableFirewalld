@@ -1,0 +1,7 @@
+---
+- name: Disable firewalld
+  tasks:
+    service:
+      name: firewalld
+      state: stoped
+      enable: false
