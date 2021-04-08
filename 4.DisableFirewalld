@@ -1,5 +1,6 @@
 ---
 - name: Disable firewalld
+  hosts: "{{ RUNSVR }}"
   tasks:
     service:
       name: firewalld
