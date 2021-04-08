@@ -3,4 +3,4 @@
   tasks:
     - name: Change the hostname
       hostname:
-        name="{{ RUNSRV }}
+        name="{{ RUNSRV }}"
