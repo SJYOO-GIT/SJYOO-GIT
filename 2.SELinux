@@ -10,7 +10,7 @@
     - name: Change SElinux mode & Reboot
       shell: sed -i 's/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
       when:
-        sestatus_result.stdout == "disabled"
+        sestatus_result.stdout == "disabled"      
 
     - name: OS reboot after changed SELinux mode
       reboot:
