@@ -10,4 +10,4 @@
     - name: Change SElinux mode
       command: sed -i 'e/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
       when:
-        sestatus_result == "disabled"
+        sestatus_result.stdout == "disabled"
