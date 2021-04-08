@@ -12,6 +12,7 @@
       when:
         sestatus_result.stdout == "disabled"
 
+    - name: OS reboot after changed SELinux mode
       reboot:
         msg: "Reboot initiated by modify SELinux mode"
       when:
