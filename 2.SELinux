@@ -5,7 +5,7 @@
   tasks:
     - name: Check SELinux mode
       register: sestatus_result
-      command: sestatus | grep SELinux | awk '{print $3}'
+      command: sestatus | grep SELinux | grep -v grep | awk '{print $3}'
 
     - name: Change SElinux mode
       command: sed -i 'e/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
