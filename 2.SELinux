@@ -1,6 +1,6 @@
 ---
 - name: Change SELinux mode with permissive
-  hosts: {{ RUNSVR }}
+  hosts: "{{ RUNSVR }}"
   
   tasks:
     - name: Check SELinux mode
