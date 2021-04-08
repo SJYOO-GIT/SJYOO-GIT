@@ -9,6 +9,9 @@
 
     - name: Change SElinux mode
       shell: sed -i 's/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
+      when:
+        sestatus_result.stdout == "disabled"
+
       reboot:
         msg: "Reboot initiated by modify SELinux mode"
       when:
