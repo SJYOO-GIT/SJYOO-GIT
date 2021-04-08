@@ -1,6 +1,6 @@
 ---
 - hosts: "{{ RUNSRV }}"
   tasks:
-    - name: Change hostname
-      command: hostname "TEST_SVR"
-
+    - name: Change the hostname
+      hostname:
+        name="{{ RUNSRV }}
