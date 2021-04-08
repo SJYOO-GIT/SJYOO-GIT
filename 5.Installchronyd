@@ -10,6 +10,6 @@
 
     - name: Chroynd start
       service:
-        name: chrony
+        name: chronyd
         state: restarted
         enalbed: true
