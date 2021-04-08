@@ -1,3 +1,6 @@
 ---
-- name: test
-  command: ls -al
+- hosts: all
+  tasks:
+    - name: Change hostname
+      command: hostname "TEST_SVR"
+
