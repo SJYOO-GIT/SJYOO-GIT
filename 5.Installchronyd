@@ -1,0 +1,11 @@
+---
+- name: Install Chronyd
+  hosts: "{{ RUNSVR }}"
+
+  tasks:
+    - name: Install Chronyd
+      yum:
+        name: chronyd
+        state: latest
+
+    - name: Chronyd configure
