@@ -8,6 +8,6 @@
       shell: sestatus | grep SELinux | grep -v grep | awk '{print $3}'
 
     - name: Change SElinux mode
-      command: sed -i 'e/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
+      command: sed -i 's/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
       when:
         sestatus_result.stdout == "disabled"
