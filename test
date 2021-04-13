@@ -2,7 +2,7 @@
 - hosts: "{{ RUNSVR }}"
 
   tasks:
-    - name: user create
+    - name: Delete user
       user: name={{ item }} state=absent
       with_items:
         - user1
