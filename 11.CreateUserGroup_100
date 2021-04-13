@@ -4,11 +4,17 @@
 
   tasks:
     - name: group create
-      group: name="{{ item }}" gid=400
+      group:
+        name: "{{ item }}"
+        gid: 400
       with_items:
         - "{{ groupname }}"
 
     - name: user create
-      user: name="{{ item }}" state=present group=grp_ansible groups=grp_ansible
+      user:
+        name: "{{ item }}"
+        state: present
+        group: grp_ansible
+        groups: grp_ansible
       with_items:
         - "{{ userlist }}"
