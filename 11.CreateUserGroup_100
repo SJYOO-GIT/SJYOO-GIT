@@ -3,7 +3,7 @@
   
   tasks:
     include_vars:
-      - 11.CreateUserGroup_VAR.yml
+      -11.CreateUserGroup_VAR.yml
     - name: group create
         group: name={{ item }} gid=400
         with_items:
