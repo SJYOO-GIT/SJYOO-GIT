@@ -1,8 +1,8 @@
 ---
 - name: clone a private repository
   hosts: "{{ RUNSVR }}"
-    tasks:
-      get_url:
-        url: https://github.com/SJYOO-GIT/SJYOO-GIT/blob/master/chrony.conf
-        dest: /tmp
-        mode: 744
+  tasks:
+    get_url:
+      url: https://github.com/SJYOO-GIT/SJYOO-GIT/blob/master/chrony.conf
+      dest: /tmp
+      mode: 744
