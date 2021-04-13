@@ -3,7 +3,7 @@
   tasks:
     - name: check the firewalld status
       register: check_firewalld
-      shell : systemctl status firewalld | grep -i acitve | awk '{print $3}'
+      shell : "systemctl status firewalld | grep -i acitve | awk '{print $3}'"
 
     - name: Disable firewalld
       service:
