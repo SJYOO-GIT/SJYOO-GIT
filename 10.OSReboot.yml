@@ -2,7 +2,7 @@
   - hosts: "{{ RUNSVR }}"
     
     tasks:
-      - name: yum update
+      - name: Server reboot
         reboot:
           msg: "OS reboot NOW!!!"
           reboot_timeout: 10
