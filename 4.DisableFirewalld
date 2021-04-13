@@ -1,10 +1,14 @@
 ---
 - hosts: "{{ RUNSVR }}"
   tasks:
+    - name: check the firewalld status
+      register: check_firewalld
+      chell : systemctl status firewalld | grep -i acitve | awk '{print $3}'
+
     - name: Disable firewalld
       service:
         name: firewalld
         state: stopped
         enabled: false
       when:
-        firewalld.state == "started" || firewalld.state == "restarted"
+        check_firewalld.stdout == "(running)"
