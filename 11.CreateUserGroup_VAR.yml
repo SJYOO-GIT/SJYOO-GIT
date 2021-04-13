@@ -1,7 +1,7 @@
 ---
 - vars:
-    grouplist:
-      - groupname: grp_ansible
+    groupname:
+      - grp_ansible
     
     userlist:
       - user1

@@ -1,12 +1,13 @@
 ---
 - hosts: "{{ RUNSVR }}"
   include_vars:
-    - 11.CreateUserGroup_VAR.yml  
+    - 11.CreateUserGroup_VAR.yml
+
   tasks:
     - name: group create
       group: name={{ item }} gid=400
       with_items:
-        - "{{ grouplist.groupname }}"
+        - "{{ groupname }}"
 
     - name: user create
       user: name={{ item }} state=present group=grp_ansible groups=grp_ansible
