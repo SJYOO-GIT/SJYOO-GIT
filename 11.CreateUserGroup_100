@@ -1,6 +1,6 @@
 ---
 - hosts: "{{ RUNSVR }}"
-  include_vars: 11.CreateUserGroup_VAR.yml
+  vars_files: 11.CreateUserGroup_VAR.yml
 
   tasks:
     - name: group create
