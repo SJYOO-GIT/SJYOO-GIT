@@ -6,7 +6,7 @@
       group: name="grp_ansible" gid=400
 
     - name: user create
-      user: name={{ items }} state=present groups=grp_ansible
+      user: name={{ item }} state=present groups=grp_ansible
       with_items:
         - user1
         - user2
