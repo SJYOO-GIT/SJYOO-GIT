@@ -8,8 +8,16 @@
         name: chrony
         state: latest
 
+    - name: chrony original config backup
+      copy:
+        src: /etc/chrony.conf
+        dest: /etc/chrony.conf.org       
+
     - name: Chroynd configure
-      
+      copy:
+        src: chrony.conf
+        dest: /etc
+        mode: 755
 
     - name: Chroynd start
       service:
