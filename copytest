@@ -1,6 +1,6 @@
 ---
 - name: web copy test
-  hosts: {{ RUNSVR }}
+  hosts: "{{ RUNSVR }}"
   tasks:
     copy:
       svr: "https://github.com/SJYOO-GIT/SJYOO-GIT/blob/master/chrony.conf"
