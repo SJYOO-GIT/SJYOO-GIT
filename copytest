@@ -5,4 +5,6 @@
       get_url:
         url: https://github.com/SJYOO-GIT/SJYOO-GIT/blob/b70b22f0244e42f32eac30b9c1cdebe34b263dd0/chrony.conf
         dest: /tmp
-        mode: 744
+        mode: 755
+
+
