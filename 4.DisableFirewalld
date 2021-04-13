@@ -6,3 +6,5 @@
         name: firewalld
         state: stopped
         enabled: false
+      when:
+        firewalld.state == "started" || firewalld.state == "restarted"
