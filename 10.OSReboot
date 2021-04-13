@@ -1,0 +1,8 @@
+---
+  - hosts: "{{ RUNSVR }}"
+    
+    tasks:
+      - name: yum update
+        reboot:
+          msg: "OS reboot NOW!!!"
+          reboot_timeout: 300
