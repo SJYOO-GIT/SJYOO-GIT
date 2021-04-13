@@ -3,7 +3,7 @@
   tasks:
     - name: copytest
       copy:
-        scv: chrony.conf
+        svc: chrony.conf
         dest: /tmp
         mode: 755
 
