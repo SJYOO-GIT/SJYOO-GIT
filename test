@@ -1,0 +1,13 @@
+---
+- hosts: "{{ RUNSVR }}"
+
+  tasks:
+    {% for user in admin_users %}
+    user:
+      name: "{{ user.name }} "
+      uid: "{{ user.uid }}"
+    {% endfor %}
+
+    admin_users:
+      - name: user1
+        uid: 2000
