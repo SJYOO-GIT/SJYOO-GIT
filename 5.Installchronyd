@@ -8,6 +8,9 @@
         name: chrony
         state: latest
 
+    - name: Chroynd configure
+      
+
     - name: Chroynd start
       service:
         name: chronyd
