@@ -1,7 +1,7 @@
 ---
-  - hosts: "{{ RUNSVR }}"
-    
-    tasks:
-      - name: Server reboot
-        reboot:
-          reboot_timeout: 10
+- hosts: "{{ RUNSVR }}"
+  tasks:
+    - name: Server reboot
+      reboot:
+        msg: "OS reboot"
+        reboot_timeout: 10
