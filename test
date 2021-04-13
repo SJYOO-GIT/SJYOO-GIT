@@ -106,5 +106,5 @@
         - user99
         - user100
 
-    - name: group create
+    - name: Delete group
       group: name="grp_ansible" state=absent        
