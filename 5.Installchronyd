@@ -9,9 +9,7 @@
         state: latest
 
     - name: chrony original config backup
-      copy:
-        src: /etc/chrony.conf
-        dest: /etc/chrony.conf.org       
+      command: mv /etc/chrony.conf /etc/chrony.conf.org
 
     - name: Chroynd configure
       copy:
