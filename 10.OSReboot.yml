@@ -5,4 +5,4 @@
       - name: yum update
         reboot:
           msg: "OS reboot NOW!!!"
-          reboot_timeout: 300
+          reboot_timeout: 10
