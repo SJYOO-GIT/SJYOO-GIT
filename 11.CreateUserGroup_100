@@ -4,12 +4,12 @@
   tasks:
     include_vars:
       - 11.CreateUserGroup_VAR.yml
-      - name: group create
-        group: name={{ item }} gid=400
-        with_items:
-          - "{{ grouplist.groupname }}"
+        - name: group create
+          group: name={{ item }} gid=400
+          with_items:
+            - "{{ grouplist.groupname }}"
 
-      - name: user create
-        user: name={{ item }} state=present group=grp_ansible groups=grp_ansible
-        with_items:
-          - "{{ userlist }}"
+        - name: user create
+          user: name={{ item }} state=present group=grp_ansible groups=grp_ansible
+          with_items:
+            - "{{ userlist }}"
