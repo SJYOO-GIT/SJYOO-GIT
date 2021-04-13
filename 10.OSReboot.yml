@@ -4,5 +4,4 @@
     tasks:
       - name: Server reboot
         reboot:
-          msg: "OS reboot NOW!!!"
           reboot_timeout: 10
