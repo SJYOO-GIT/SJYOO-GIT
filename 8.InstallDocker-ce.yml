@@ -1,0 +1,13 @@
+---
+- name: Install docker-ce and service start docker
+  hosts: "{{ RUNSVR }}"
+  tasks:
+    - name: install docker-ce
+      yum:
+        name: docker-ce
+        state: lastest
+
+    - name: Start the docker-ce service
+      service:
+        name: docker-ce
+        state: restarted
