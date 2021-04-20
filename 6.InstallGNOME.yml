@@ -1,6 +1,5 @@
 ---
 - hosts: "{{ RUNSVR }}"
-  inclue files: 
 
   tasks:
     - name: Install GNOME
