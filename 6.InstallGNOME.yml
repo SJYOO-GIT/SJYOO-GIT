@@ -4,3 +4,5 @@
   tasks:
     - name: Install GNOME
       yum:
+        name: "@^gnome-desktop-environment"
+        state: present
