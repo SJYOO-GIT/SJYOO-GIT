@@ -16,7 +16,7 @@
     - name: install docker-ce
       yum:
         name: docker-ce
-        state: lastest
+        state: latest
 
     - name: Start the docker-ce service
       service:
